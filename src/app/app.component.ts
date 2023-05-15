@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'sharing-data-between-components';
+
+  actions : Array<any> = [
+    {title : 'home', "route": '/home' , icon : 'house'},
+    {title : 'products', "route": '/products' , icon : 'search'},
+    {title : 'new product', "route": '/new-product' , icon : 'safe'},
+  ];
+  curentaction : any ;
+  setCurentaction (action : any) {
+     this.curentaction = action
+  }
+
+
 }
